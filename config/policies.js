@@ -26,10 +26,10 @@ module.exports.policies = {
   *                                                                          *
   ***************************************************************************/
 
-  '*': 'passport',
+  '*': [ 'basicAuth', 'passport', 'sessionAuth' ],
 
   AuthController: {
-    '*': true,
+    '*': [ 'passport' ]
   },
 
   // Open registration
